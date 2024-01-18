@@ -1,4 +1,11 @@
-# Origins: Regenerated
+![Title](./origins_regenerated_title.png)
+<I hate html stuff whys it gotta be so complex to centre and link and image>
+<p align="center">
+   <a href="https://www.curseforge.com/minecraft/mc-mods/origins-regenerated/files">
+   <img src="https://cf.way2muchnoise.eu/origins-regenerated.svg" alt="mod downloads"> <br>
+   </a>
+</p>
+
 ### origin-regen
 ### by duzu
 
