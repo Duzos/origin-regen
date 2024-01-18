@@ -5,8 +5,9 @@
 ## Provides integration between [Cwaigs Regeneration](https://modrinth.com/mod/regeneration) and [Origins](https://modrinth.com/mod/origins)
 
 ## What does this mod do?
-### - When you have finished regenerating, this mod will randomly select a new primary origin for you.
-### - More to come.
+### - Added the Timelord origin, which has one power - regeneration
+### - Added the Regeneration power, which gives you 12 regenerations and gives you a random origin on your last regeneration
+
 
 ## Links
 [Github](https://github.com/Duzos/origin-regen)
