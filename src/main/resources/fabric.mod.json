@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "id": "origin-regen",
+  "id": "originregen",
   "version": "${version}",
   "name": "Origins: Regenerated",
-  "description": "Provides integration between Cwaigs Regeneration and Origins, changing your origin on regeneration.",
+  "description": "Provides integration between Cwaigs Regeneration and Origins",
   "authors": [ "duzo" ],
   "contact": {
     "repo": "https://github.com/Duzos/origin-regen"
   },
   "license": "Apache-2.0",
-  "icon": "assets/origin-regen/icon.png",
+  "icon": "assets/originregen/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
@@ -20,7 +20,7 @@
     ]
   },
   "mixins": [
-    "origin-regen.mixins.json"
+    "originregen.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
