@@ -48,7 +48,7 @@ public class RegenHandler implements Acting {
 
         Origin found = OriginsUtil.getRandomOrigin();
         OriginsUtil.setPlayerOrigin(player, found);
-        ChatUtil.sendActionBarMessage(player, Text.literal("Your origin is now ").append(found.getName())); // TODO: translatable
+        ChatUtil.sendActionBarMessage(player, Text.translatable("message.origin-regen.random").append(found.getName()));
     }
 
     @Override
