@@ -50,10 +50,7 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    // Required Dependencies
-
-    modApi "com.terraformersmc:modmenu:${project.modmenu_version}"
-
+    // Optional Dependencies
     // Origins
     modImplementation "com.github.apace100:origins-fabric:${project.origins_version}"
 
@@ -70,10 +67,19 @@ dependencies {
     modApi("me.shedaniel.cloth:cloth-config-fabric:${project.clothconfig_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
+    // Pehkui
+    modImplementation("com.github.Virtuoel:Pehkui:${project.pehkui_version}", {
+        exclude group: "net.fabricmc.fabric-api"
+    })
+
+    // Required dependencies
 
     // Regen
     modApi("curse.maven:forge-config-api-port-fabric-547434:4583000")
     modImplementation("curse.maven:${project.regen_version}")
+
+    // Mod menu
+    modApi "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
 
 processResources {

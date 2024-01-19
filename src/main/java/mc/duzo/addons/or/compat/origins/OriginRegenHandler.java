@@ -1,22 +1,15 @@
-package mc.duzo.addons.or;
+package mc.duzo.addons.or.compat.origins;
 
-import io.github.apace100.origins.origin.Origin;
-import io.github.apace100.origins.origin.OriginUpgrade;
 import mc.craig.software.regen.common.regen.IRegen;
 import mc.craig.software.regen.common.regen.acting.Acting;
 import mc.craig.software.regen.common.regen.acting.ActingForwarder;
-import mc.duzo.addons.or.util.ChatUtil;
-import mc.duzo.addons.or.util.OriginsUtil;
-import mc.duzo.addons.or.util.RegenerationUtil;
+import mc.duzo.addons.or.ORMod;
 import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.text.Text;
 
-import java.nio.file.DirectoryNotEmptyException;
-
-public class RegenHandler implements Acting {
+public class OriginRegenHandler implements Acting {
     public static void init() {
-        ORMod.LOGGER.info("Origin Regen - Setting up Regeneration");
-        ActingForwarder.register(new RegenHandler(), ActingForwarder.Side.COMMON);
+        ORMod.LOGGER.info("Origin Regen - Setting up Origins");
+        ActingForwarder.register(new OriginRegenHandler(), ActingForwarder.Side.COMMON);
     }
     @Override
     public void onRegenTick(IRegen iRegen) {
@@ -50,7 +43,7 @@ public class RegenHandler implements Acting {
         boolean isOutOfRegens = iRegen.regens() == 0;
 
         // loqor level of if statements here todo cleanup?
-        if (RegenerationUtil.hasRegenerationPower(player)) {
+        if (OriginsUtil.hasRegenerationPower(player)) {
             if (isOutOfRegens) {
                 if (ORMod.config().shouldChangeOrigin)
                     OriginsUtil.setToRandomOrigin(player);

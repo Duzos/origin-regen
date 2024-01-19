@@ -1,11 +1,9 @@
 package mc.duzo.addons.or.mixin;
 
-import io.github.apace100.apoli.power.PowerTypeRegistry;
-import io.github.apace100.origins.component.OriginComponent;
 import io.github.apace100.origins.component.PlayerOriginComponent;
 import io.github.apace100.origins.origin.Origin;
 import io.github.apace100.origins.origin.OriginLayer;
-import mc.duzo.addons.or.util.RegenerationUtil;
+import mc.duzo.addons.or.compat.origins.OriginsUtil;
 import net.minecraft.entity.player.PlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -19,6 +17,6 @@ public class PlayerOriginComponentMixin {
 
     @Inject(method="setOrigin", at = @At("TAIL"), remap = false)
     public void ORIGINREGEN_setOrigin(OriginLayer layer, Origin origin, CallbackInfo ci) {
-        RegenerationUtil.setupRegenerationPower(layer, origin, this.player);
+        OriginsUtil.setupRegenerationPower(layer, origin, this.player);
     }
 }
