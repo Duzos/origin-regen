@@ -45,16 +45,20 @@ public class RegenHandler implements Acting {
 
     @Override
     public void onRegenFinish(IRegen iRegen) {
-        if (!(iRegen.getLiving() instanceof ServerPlayerEntity)) return;
+        if (!(iRegen.getLiving() instanceof ServerPlayerEntity player)) return;
 
         boolean isOutOfRegens = iRegen.regens() == 0;
-        ServerPlayerEntity player = (ServerPlayerEntity) iRegen.getLiving();
 
-        if (isOutOfRegens && RegenerationUtil.hasRegenerationPower(player)) {
-            Origin found = OriginsUtil.getRandomOrigin();
-            OriginsUtil.setPlayerOrigin(player, found);
-            ChatUtil.sendActionBarMessage(player, Text.translatable("message." + ORMod.MOD_ID +".random").append(found.getName()));
-            return;
+        // loqor level of if statements here todo cleanup?
+        if (RegenerationUtil.hasRegenerationPower(player)) {
+            if (isOutOfRegens) {
+                if (ORMod.config().shouldChangeOrigin)
+                    OriginsUtil.setToRandomOrigin(player);
+                else
+                    OriginsUtil.setPlayerOrigin(player, OriginsUtil.getHumanOrigin());
+            }
+        } else if (ORMod.config().shouldChangeOrigin) {
+            OriginsUtil.setToRandomOrigin(player);
         }
     }
 

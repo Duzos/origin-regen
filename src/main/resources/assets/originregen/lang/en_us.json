@@ -1,6 +1,8 @@
 {
   "message.originregen.random": "Your origin is now ",
 
+  "text.autoconfig.originregen.option.shouldChangeOrigin": "Should change origin on regeneration?",
+
   "origin.originregen.timelord.name": "Timelord",
   "origin.originregen.timelord.description": "You are a Timelord, an alien race from the planet Gallifrey which can escape death via regeneration.",
 

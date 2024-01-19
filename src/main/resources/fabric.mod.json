@@ -17,6 +17,9 @@
     ],
     "main": [
       "mc.duzo.addons.or.ORMod"
+    ],
+    "modmenu": [
+      "mc.duzo.addons.or.config.ORModMenu"
     ]
   },
   "mixins": [

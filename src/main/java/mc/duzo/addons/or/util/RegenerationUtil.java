@@ -2,11 +2,8 @@ package mc.duzo.addons.or.util;
 
 import io.github.apace100.apoli.power.PowerType;
 import io.github.apace100.apoli.power.PowerTypeRegistry;
-import io.github.apace100.origins.component.OriginComponent;
 import io.github.apace100.origins.origin.Origin;
 import io.github.apace100.origins.origin.OriginLayer;
-import io.github.apace100.origins.origin.OriginUpgrade;
-import mc.craig.software.regen.Regeneration;
 import mc.craig.software.regen.common.regen.IRegen;
 import mc.craig.software.regen.common.regen.RegenerationData;
 import mc.duzo.addons.or.ORMod;

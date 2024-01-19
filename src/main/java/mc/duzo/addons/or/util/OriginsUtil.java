@@ -2,16 +2,14 @@ package mc.duzo.addons.or.util;
 
 import io.github.apace100.origins.Origins;
 import io.github.apace100.origins.component.OriginComponent;
-import io.github.apace100.origins.component.PlayerOriginComponent;
 import io.github.apace100.origins.origin.Origin;
 import io.github.apace100.origins.origin.OriginLayer;
 import io.github.apace100.origins.origin.OriginLayers;
 import io.github.apace100.origins.origin.OriginRegistry;
 import io.github.apace100.origins.registry.ModComponents;
 import mc.duzo.addons.or.ORMod;
-import net.fabricmc.fabric.api.transfer.v1.storage.base.SidedStorageBlockEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class OriginsUtil {
@@ -27,6 +25,9 @@ public class OriginsUtil {
         Identifier id = (Identifier) OriginRegistry.identifiers().toArray()[index];
         Origin found = OriginRegistry.get(id);
         return (found.equals(Origin.EMPTY) ? getRandomOrigin() : found);
+    }
+    public static Origin getHumanOrigin() {
+        return OriginRegistry.get(new Identifier(Origins.MODID, "human"));
     }
     /**
      * Sets the player's origin for the specified origin layer and returns the previous origin.
@@ -67,5 +68,16 @@ public class OriginsUtil {
             DEFAULT_LAYER = OriginLayers.getLayer(DEFAULT_LAYER_ID);
         }
         return DEFAULT_LAYER;
+    }
+
+    public static void setToRandomOrigin(ServerPlayerEntity player, boolean shouldInform) {
+        Origin found = getRandomOrigin();
+        setPlayerOrigin(player, found);
+
+        if (shouldInform)
+            ChatUtil.sendActionBarMessage(player, Text.translatable("message." + ORMod.MOD_ID +".random").append(found.getName()));
+    }
+    public static void setToRandomOrigin(ServerPlayerEntity player) {
+        setToRandomOrigin(player, true);
     }
 }
