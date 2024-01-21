@@ -6,21 +6,28 @@
    </a>
 </p>
 
-### origin-regen
-### by duzu
-### *name change soon*
+**origin-regen**
 
-## Provides integration for [Cwaigs Regeneration](https://modrinth.com/mod/regeneration)
+**by duzu**
+
+*name change soon*
+
+**Requires [Cwaigs Regeneration](https://modrinth.com/mod/regeneration)**
 
 ## What does this mod do?
+
 ### If you have [Origins](https://modrinth.com/mod/origins)
-#### - Adds the Timelord origin, which has one power - regeneration
-#### - Adds the Regeneration power, which gives you 12 regenerations and gives you a random origin on your last regeneration
+
+- Adds the Timelord origin, which has one power - regeneration
+- Adds the Regeneration power, which gives you 12 regenerations and gives you a random origin on your last regeneration
+- If you are not a TimeLord and you regenerate, your body is unstable and your origin will change randomly
+
 ### If you have [Pehkui](https://modrinth.com/mod/pehkui)
-#### - Randomly changes your size on regeneration
-#### - More planned
+- Randomly changes your size on regeneration
+- More planned
+
 ### Config
-#### All features are toggleable and editable in a config, requires [Mod Menu](https://modrinth.com/mod/modmenu)
+All features are toggleable and editable in a config, **requires [Mod Menu](https://modrinth.com/mod/modmenu)**
 
 ## Links
 [Github](https://github.com/Duzos/origin-regen)
