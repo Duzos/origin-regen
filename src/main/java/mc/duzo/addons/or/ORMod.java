@@ -2,6 +2,7 @@ package mc.duzo.addons.or;
 
 import io.netty.handler.ssl.PemPrivateKey;
 import mc.duzo.addons.or.compat.DependencyChecker;
+import mc.duzo.addons.or.compat.origins.OriginRegenHandler;
 import mc.duzo.addons.or.compat.pehkui.PehkuiRegenHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -24,7 +25,8 @@ public class ORMod {
 		if (DependencyChecker.hasPehkui())
 			PehkuiRegenHandler.init();
 
-
+		if (DependencyChecker.hasOrigins())
+			OriginRegenHandler.init();
 	}
 
 	public static float getRandomBetweenLimits(float min, float max) {

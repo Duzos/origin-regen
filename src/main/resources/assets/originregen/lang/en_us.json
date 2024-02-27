@@ -1,0 +1,9 @@
+{
+  "message.originregen.random": "Your origin is now ",
+
+  "origin.originregen.timelord.name": "Timelord",
+  "origin.originregen.timelord.description": "You are a Timelord, an alien race from the planet Gallifrey which can escape death via regeneration.",
+
+  "power.originregen.regeneration.name": "Regeneration",
+  "power.originregen.regeneration.description": "Your body has a way of cheating death by regenerating every cell in your body, but only a few times. On your last regeneration you will become a new origin."
+}

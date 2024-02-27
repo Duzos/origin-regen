@@ -2,17 +2,21 @@ buildscript {
 	repositories {
 		maven { url = 'https://maven.minecraftforge.net' }
 		maven { url = 'https://maven.parchmentmc.org' }
+		maven { url = 'https://repo.spongepowered.org/maven' }
 		mavenCentral()
 	}
 	dependencies {
 		classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
 		classpath 'org.parchmentmc:librarian:1.+'
+		classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
 	}
 }
+
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
+apply plugin: "org.spongepowered.mixin"
 
 version = '1.0'
 group = 'mc.duzo.addons.or'
@@ -100,6 +104,8 @@ repositories {
 dependencies {
 	minecraft 'net.minecraftforge:forge:1.16.5-36.2.39'
 
+	annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
 	implementation fg.deobf("maven.modrinth:regeneration:xLzOeRLR")
 
 	implementation fg.deobf("maven.modrinth:origins-forge:1.16.5-0.7.3.9")
@@ -107,7 +113,13 @@ dependencies {
 	implementation fg.deobf("me.shedaniel.cloth:cloth-config-forge:4.17.101")
 	implementation fg.deobf("maven.modrinth:architectury-api:1.32.68+forge")
 
-	implementation fg.deobf("maven.modrinth:pehkui:3.7.9+1.16.5-forge") // fixme for some reason pehkui causes dev envs to crash, at least it does for me.
+	implementation fg.deobf("maven.modrinth:pehkui:3.7.9+1.16.5-forge")
+}
+
+
+mixin {
+	add sourceSets.main, 'mixins.originregen.refmap.json'
+	config 'originregen.mixins.json'
 }
 
 jar {

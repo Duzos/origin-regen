@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "mc.duzo.addons.or.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "mixins.originregen.refmap.json",
+  "minVersion": "0.8",
+  "mixins": [
+    "PlayerOriginComponentMixin"
+  ]
+}
