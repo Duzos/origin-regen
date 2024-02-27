@@ -1,4 +1,4 @@
-![Title](./origins_regenerated_title.png)
+![Title](https://raw.githubusercontent.com/Duzos/origin-regen/master/origins_regenerated_title.png)
 
 ![GitHub Release](https://img.shields.io/github/v/release/Duzos/origin-regen?include_prereleases)
 ![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/origin-regen?link=https%3A%2F%2Fmodrinth.com%2Fmod%2Fvortex%2Fversions)
