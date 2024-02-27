@@ -39,6 +39,18 @@ repositories {
             artifact() //Look directly for artifact
         }
     }
+
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 dependencies {
@@ -76,7 +88,7 @@ dependencies {
 
     // Regen
     modApi("curse.maven:forge-config-api-port-fabric-547434:4583000")
-    modImplementation("curse.maven:${project.regen_version}")
+    modImplementation("maven.modrinth:${project.regen_version}")
 
     // Mod menu
     modApi "com.terraformersmc:modmenu:${project.modmenu_version}"
