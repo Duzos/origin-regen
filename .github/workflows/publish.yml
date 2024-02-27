@@ -1,6 +1,6 @@
 name: Publish Forge 1.16.5 on GitHub
 
-on: [ pull_request, workflow_dispatch, push ]
+on: [ workflow_dispatch ]
 
 env:
   JAVA_VERSION: 17
