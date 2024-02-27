@@ -1,10 +1,10 @@
 ![Title](./origins_regenerated_title.png)
 
 ![GitHub Release](https://img.shields.io/github/v/release/Duzos/origin-regen?include_prereleases)
-![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/origin-regen?link=https%3A%2F%2Fmodrinth.com%2Fmod%2Fvortex%2Fversions)
+![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/origin-regen)
 
-![Modrinth Downloads](https://img.shields.io/modrinth/dt/vortex?logo=modrinth&link=https%3A%2F%2Fmodrinth.com%2Fmod%2Forigin-regen)
-![CurseForge Downloads](https://img.shields.io/curseforge/dt/856138?logo=curseforge&color=red&link=https%3A%2F%2Fwww.curseforge.com%2Fminecraft%2Fmc-mods%2Forigins-regenerated)
+![Modrinth Downloads](https://img.shields.io/modrinth/dt/origin-regen?logo=modrinth)
+![CurseForge Downloads](https://img.shields.io/curseforge/dt/963834?logo=curseforge&color=red)
 
 
 **origin-regen**
