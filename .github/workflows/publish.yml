@@ -1,4 +1,4 @@
-name: Publish on GitHub
+name: Publish Fabric 1.20.1 on GitHub
 
 on: [ pull_request, workflow_dispatch, push ]
 
@@ -11,7 +11,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/release'
+    if: github.ref == 'refs/heads/releases/fabric/1.20.1'
     steps:
       - name: Check Environment Variables
         run: env
