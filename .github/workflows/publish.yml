@@ -1,4 +1,4 @@
-name: Publish on GitHub
+name: Publish Forge 1.16.5 on GitHub
 
 on: [ pull_request, workflow_dispatch, push ]
 
@@ -11,7 +11,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/release'
+    if: github.ref == 'refs/heads/releases/forge/1.16.5'
     steps:
       - name: Check Environment Variables
         run: env
@@ -51,5 +51,5 @@ jobs:
           github-generate-changelog: true
           version-type: release
 
-          loaders: fabric
+          loaders: forge
           java: "${{env.JAVA_VERSION}}"

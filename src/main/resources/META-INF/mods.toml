@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="Apache License v2"
+
+[[mods]]
+modId="xmod"
+version="${file.jarVersion}"
+displayName="X Mod"
+credits="Thanks for this mod goes to Java, Minecraft and Forge"
+authors="X Mod Team"
+description='''
+A blank Mod that can be the foundation of others.
+'''
+
+[[dependencies.xmod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.xmod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,1.17)"
+    ordering="NONE"
+    side="BOTH"

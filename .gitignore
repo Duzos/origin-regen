@@ -1,38 +1,21 @@
-# gradle
-
-.gradle/
-build/
-out/
-classes/
-
-# eclipse
-
-*.launch
-
-# idea
-
-.idea/
-*.iml
-*.ipr
-*.iws
-
-# vscode
-
-.settings/
-.vscode/
-bin/
-.classpath
+.gradle
 .project
+.classpath
+*.launch
+/.settings/
+/bin/
+/build/
+/run/
+/src/generated/
 
-# macos
+# Ignore Gradle GUI config
+gradle-app.setting
 
-*.DS_Store
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
 
-# fabric
+# Cache of project
+.gradletasknamecache
 
-run/
-
-# java
-
-src/main/generated/.cache
-src/main/generated
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
